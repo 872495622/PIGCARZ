@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pebble Post — characters</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f2c84b' stroke='%23373f42' stroke-width='3'/%3E%3C/svg%3E" />
+  <style>
+    :root { --ink: #373f42; --paper: #f7f4ee; --shadow: #647a87; --teal: #81bfbc; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: var(--teal); color: var(--ink); overflow: hidden; }
+    body { font-family: "Patrick Hand", "Segoe Print", cursive; }
+    canvas { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+    .hud { position: fixed; inset: 0; pointer-events: none; }
+    .hud button { pointer-events: auto; font: inherit; color: var(--ink); background: var(--paper); border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--shadow); cursor: pointer; }
+    .hud button.on { background: #f2c84b; }
+    h1 { margin: 0; font-family: "Lilita One", "Arial Black", sans-serif; letter-spacing: 0.03em; color: var(--paper); text-shadow: 4px 4px 0 var(--ink); font-size: 28px; }
+    .top { position: absolute; top: 16px; left: 18px; right: 18px; display: flex; justify-content: space-between; gap: 12px; align-items: flex-end; }
+    .who { color: var(--paper); text-shadow: 2px 2px 0 rgba(55, 63, 66, 0.45); font-size: 22px; margin: 0; }
+    .modes { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+    .modes button { padding: 4px 10px; }
+    .cast { position: absolute; left: 12px; right: 12px; bottom: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .cast button { padding: 4px 8px; }
+  </style>
+</head>
+<body>
+  <canvas id="c"></canvas>
+  <div class="hud">
+    <div class="top">
+      <div>
+        <h1>CHARACTERS</h1>
+        <p class="who" id="who"></p>
+      </div>
+      <div class="modes">
+        <button type="button" id="walk">Walk</button>
+        <button type="button" id="turn">Turn</button>
+        <button type="button" id="parcel">Parcel</button>
+        <button type="button" id="wet">Wet</button>
+        <button type="button" id="lineup">Lineup</button>
+      </div>
+    </div>
+    <div class="cast" id="cast"></div>
+  </div>
+  <script type="module" src="./src/sheet.js"></script>
+</body>
+</html>

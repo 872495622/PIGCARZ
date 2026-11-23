@@ -1,3 +1,7 @@
+import '@fontsource/lilita-one/latin.css';
+import '@fontsource/patrick-hand/latin.css';
+import '@fontsource/ma-shan-zheng/chinese-simplified.css';
+import '@fontsource/zcool-qingke-huangyou/chinese-simplified.css';
 import * as THREE from 'three';
 import { createAudio } from './audio.js';
 import {
